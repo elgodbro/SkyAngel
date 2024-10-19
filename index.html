@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+  <head>
+    <title>SkyAngel</title>
+    <link rel="stylesheet" href="css/game.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+  </head>
+  <body>
+    <div class="content">
+      <div class="start-panel">
+        <button class="btn-start-game" onclick="StartGame()">Начать игру</button>
+        <div class="instructions">
+          <h2>Инструкции к игре</h2>
+          <p>...</p>
+        </div>
+      </div>
+
+      <div class="game">
+        <div class="header">
+          <div class="info">
+            <img class="header-logo" src="imgs/logo.png"/>
+            <div class="timer">
+              <img width="26" src="imgs/icons/sec.png"/>
+              <span id="header-timer">0</span>
+            </div>
+            <div class="fuel">
+              <img width="30" src="imgs/icons/oilm.png"/>
+              <div id="fuel-level-bar">
+                <div></div>
+              </div>
+            </div>
+            <div class="stars">
+              <img width="26" src="imgs/icons/star-icon.png"/>
+              <span id="header-stars">0</span>
+            </div>
+          </div>
+          <div class="settings">
+            <img id="pause-play-btn" width="24" src="imgs/icons/pause.png" onclick="PauseGame()"/>
+            <img id="sound-btn" width="28" src="imgs/icons/sound.png"/>
+            <div class="font-control">
+              <button class="btn-font-control" id="btn-font-lower">
+                &or;
+              </button>
+              <span class="font-text-icon">Аа</span>
+              <button class="btn-font-control" id="btn-font-lower">
+                &and;
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="playing-field">
+          <div id="plane"></div>
+        </div>
+
+        <div class="game-stats">
+          <h2>Игра окончена</h2>
+          <p>
+            Количество звезд: <span id="stat-star-count">0</span><br/>
+            Время: <span id="stat-time">0</span>
+          </p>
+          <button class="restart" onclick="RestartGame()">Начать заново</button>
+        </div>
+      </div>
+
+    </div>
+    <script src="js/game.js"></script>
+  </body>
+</html>

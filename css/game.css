@@ -1,0 +1,243 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+input,
+button {
+  outline: none;
+  border: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.content {
+  width: 1024px;
+  height: 768px;
+  max-width: 1024px;
+  max-height: 768px;
+  border: 2px solid #000;
+  display: flex;
+}
+
+.start-panel {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.btn-start-game {
+  background: #fff;
+  border: 2px solid #000;
+  padding: 10px 20px;
+  font-size: 28px;
+  margin-top: -50px;
+}
+
+.btn-start-game:hover {
+  background: #f39c12;
+  cursor: pointer;
+}
+
+.instructions {
+  border: 2px solid #000;
+  padding: 10px 15px;
+  margin-top: 40px;
+  width: 40%;
+}
+
+.instructions > h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: normal;
+}
+
+.game {
+  display: none;
+  width: 100%;
+  flex-direction: column;
+}
+
+.header {
+  max-height: 75px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #303030;
+  width: 100%;
+  user-select: none;
+  z-index: 99999;
+}
+
+.info {
+  display: inherit;
+  align-items: center;
+  color: #fff;
+  width: 48%;
+  justify-content: space-between;
+}
+
+.timer, .stars, .fuel {
+  display: flex;
+  align-items: center;
+}
+
+.timer > span, .stars > span {
+  margin-left: 10px;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+#fuel-level-bar {
+  background-color: black;
+  border-radius: 7px;
+  padding: 3px;
+  width: 120px;
+  margin-left: 5px;
+}
+
+#fuel-level-bar>div {
+  background-color: orange;
+  width: 0%;
+  height: 20px;
+  border-radius: 4px;
+}
+
+.settings {
+  display: inherit;
+  align-items: center;
+  color: #fff;
+  width: 30%;
+  justify-content: space-evenly;
+}
+
+.btn-font-control {
+  background: none;
+  color: #fff;
+  font-size: 24px;
+  border: 2px solid #fff;
+  padding: 0px 5px;
+}
+
+.btn-font-control:hover {
+  cursor: pointer;
+  background: #f39c12;
+}
+
+.font-text-icon {
+  font-size: 24px;
+  font-weight: bold;
+  width: 30px;
+  margin: 0 10px;
+}
+
+.header-logo {
+  height: 75px;
+  width: auto;
+}
+
+.game-stats {
+  display: none;
+  position: absolute;
+  top: calc(50% - 85px);
+  left: calc(50% - 150px);
+  max-width: 300px;
+  width: 100%;
+  flex-direction: column;
+  border: 2px solid #000;
+  padding: 10px 20px;
+  background: #fff;
+  z-index: 9999;
+}
+
+.game-stats > h2 {
+  text-align: center;
+}
+
+.game-stats > p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.game-stats > p > hr {
+   margin: 7px 0;
+}
+
+.restart {
+  background: none;
+  font-size: 24px;
+  border: 2px solid #000;
+  padding: 5px 10px;
+  width: fit-content;
+  margin: 15px auto 0;
+}
+
+.restart:hover {
+  background: #f39c12;
+  cursor: pointer;
+}
+
+#pause-play-btn {
+  cursor: pointer;
+}
+
+#plane {
+  content: url("../imgs/airplane.png");
+  position: absolute;
+  width: 150px;
+  z-index: 2;
+}
+
+.playing-field {
+  height: 100%;
+  background: #90cbff;
+}
+
+.cloud {
+  position: absolute;
+  z-index: 1;
+}
+
+.cloud-1 {
+  content: url("../imgs/clouds/cloud1.png");
+}
+
+.cloud-2 {
+  content: url("../imgs/clouds/cloud2.png");
+}
+
+.cloud-3 {
+  content: url("../imgs/clouds/cloud3.png");
+}
+
+.parachute {
+  content: url("../imgs/parashute.png");
+  position: absolute;
+  z-index: 1;
+}
+
+.star {
+  content: url("../imgs/icons/star-icon.png");
+  position: absolute;
+  z-index: 1;
+  width: 32px;
+}
+
+.bird {
+  /* Bird image or placeholder */
+  background-image: url("../imgs/birds.png");
+  position: absolute;
+  width: 50px;
+  height: 50px;
+}
